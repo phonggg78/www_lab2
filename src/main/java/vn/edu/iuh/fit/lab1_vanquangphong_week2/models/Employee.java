@@ -19,6 +19,7 @@ public class Employee {
     private String email;
     @Column( length =  150, nullable = false)
     private String phone;
+    @Column()
     private String address;
     private EmployeeStatus status;
 
