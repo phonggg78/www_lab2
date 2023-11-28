@@ -3,7 +3,23 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
-    <persistence-unit name="default">
-
+    <persistence-unit name="W2" transaction-type="RESOURCE_LOCAL">
+        <class>vn.edu.iuh.fit.lab1_vanquangphong_week2.backend.models.Customers</class>
+        <class>vn.edu.iuh.fit.lab1_vanquangphong_week2.backend.models.Employee</class>
+        <class>vn.edu.iuh.fit.lab1_vanquangphong_week2.backend.models.Product</class>
+        <class>vn.edu.iuh.fit.lab1_vanquangphong_week2.backend.models.Orders</class>
+        <class>vn.edu.iuh.fit.lab1_vanquangphong_week2.backend.models.OrderDetails</class>
+        <class>vn.edu.iuh.fit.lab1_vanquangphong_week2.backend.models.ProductImage</class>
+        <class>vn.edu.iuh.fit.lab1_vanquangphong_week2.backend.models.ProductPrice</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
+            <property name="jakarta.persistence.jdbc.url"    value="jdbc:mariadb://localhost:3306/week2?createDatabaseIfNotExist=true" />
+            <property name="jakarta.persistence.jdbc.user"   value="root" />
+            <property name="jakarta.persistence.jdbc.password" value="sapassword" />
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.dialect"    value="org.hibernate.dialect.MariaDB103Dialect" />
+            <property name="hibernate.show_sql"   value="true" />
+            <property name="hibernate.format_sql" value="true" />
+        </properties>
     </persistence-unit>
 </persistence>
