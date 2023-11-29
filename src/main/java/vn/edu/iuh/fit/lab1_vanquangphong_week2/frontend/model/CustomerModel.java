@@ -50,14 +50,4 @@ public class CustomerModel {
         customerService.delete(id);
     }
 
-    public void createCus(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String name = req.getParameter("name");
-        String email = req.getParameter("email");
-        String address = req.getParameter("address");
-        String phone = req.getParameter("phone");
-        Customers customers = new Customers(name, email, phone, address);
-        CustomerService services = new CustomerService();
-        services.create(customers);
-        resp.sendRedirect("../webapp/index.jsp");
-    }
 }
